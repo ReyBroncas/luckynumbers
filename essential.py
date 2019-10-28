@@ -1,6 +1,6 @@
 import sys
 import os
-def draw(status_line,global_line):
+def draw(status_line,global_line,base_line):
     os.system('clear')
     score = 123
     #printing status_line
@@ -10,6 +10,8 @@ def draw(status_line,global_line):
     print('\033[1;37;40m-'*len(global_line[1]))
     #printing global_line
     for each in global_line:
+        print(each)
+    for each in base_line:
         print(each)
 
 def qustion_area_maker(question_text):
@@ -21,9 +23,19 @@ def qustion_area_maker(question_text):
     output_list.insert(0,'+'+'-'*58+'+')
     output_list.append('+'+'-'*58+'+')
     return output_list
+def bullets_maker(num):
+    x = 0
+    output_list = []
+    while x < 3:
+        output_list.append('|'+' '*((18//2)-len(str(num)))+str(num)+' '*((18//2)-len(str(num)))+'| \\')
+        output_list.insert(0,'_'*(len(output_list[0])-4))
+        output_list.append('|'+'_'*(len(output_list[0])-4)+'|_/')
+        x += 1
+    return output_list
 
-def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,animation=False):
+def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,numbers,animation=False):
     global_line = []
+    print(numbers,'bitch')
     if not animation:
         status_line = []
         score = 'Score: ' + str(score)
@@ -40,6 +52,22 @@ def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,animation
         status_line.extend(''.join(heart_u[0]+space1+score+space2+heart_m[0]+'H'))
         status_line.extend(''.join(' '+heart_u[1]+space1+' '*len(score)+space2+' '+heart_m[1]+'H'))
         status_line = denester(status_line,2,len(status_line)/2)
+
+        base_line = []
+        bullet_lines = []
+        x = 0
+        for each in numbers:
+            bullet = []
+            bullet.append('|'+' '*((18//2)-len(str(each)))+str(each)+' '*((18//2)-len(str(each)))+'| \\')
+            bullet.insert(0,'_'*((18//2)-len(str(each)))+'_'*len(str(each))+' '*((18//2)-len(str(each))))
+            bullet.append('|'+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'|_/')
+            bullet_lines.append(bullet)
+        while x <3 :
+            base_line.append(''.join(bullet_lines[0][x]+''*8+bullet_lines[1][x]+''*8+bullet_lines[2][x]))
+            x += 1
+
+
+
     #making global_line
     for line in range(16):
         if line < 9:
@@ -53,7 +81,7 @@ def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,animation
     if animation:
         return global_line
     else:
-        return status_line,global_line
+        return status_line,global_line,base_line
 
 def denester(asciistr,height,width):
     '''
