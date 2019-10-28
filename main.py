@@ -14,6 +14,7 @@ user_live = denester(user_live,9,len(user_live)/9)
 heart = denester(heart,2,len(heart)/2)
 text_area = qustion_area_maker(qustion_text_1)
 
+
 start_logo = denester(start_logo,20,len(start_logo)/20)
 landscape_1 = denester(landscape_1,20,len(landscape_1)/20)
 blank_space_startup = denester(blank_space_startup,1,len(blank_space_startup)/1)
@@ -34,8 +35,8 @@ while i < len(user_x_anim):
     user_y_anim[i] = denester(user_y_anim[i],9,len(user_y_anim[i])/9)
     man_y_anim[i] = denester(man_y_anim[i],16,len(man_y_anim[i])/16)
 
-    anim_x_global_line.append(draw_proccessing(text_area,user_x_anim[i],man_x_anim[i],0,0,0,0,True))
-    anim_y_global_line.append(draw_proccessing(text_area,user_y_anim[i],man_y_anim[i],0,0,0,0,True))
+    anim_x_global_line.append(draw_proccessing(text_area,user_x_anim[i],man_x_anim[i],0,0,0,0,[],True))
+    anim_y_global_line.append(draw_proccessing(text_area,user_y_anim[i],man_y_anim[i],0,0,0,0,[],True))
     i+=1
 
 #print(sequences.lucky_numbers(diff_list[x]))
@@ -43,24 +44,16 @@ while i < len(user_x_anim):
 #print(sequences.ulam_numbers(diff_list[x]))
 
 
-draw(blank_space_startup,start_logo)
+draw(blank_space_startup,start_logo,blank_space_startup)
 time.sleep(2)
-draw(blank_space_startup,landscape_1)
+draw(blank_space_startup,landscape_1,blank_space_startup)
 time.sleep(1)
 
-line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134)
-draw(line[0],line[1])
-x = 0
-while x < 10:
-    draw(line[0],anim_x_global_line[x])
-    time.sleep(0.04)
-    x += 1
+line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134,[12,45,117])
+draw(line[0],line[1],line[2])
 
-x = 0
-while x < 10:
-    draw(line[0],anim_y_global_line[x])
-    time.sleep(0.04)
-    x += 1
+animation_draw(anim_x_global_line,line[0],line[2])
+animation_draw(anim_y_global_line,line[0],line[2])
 '''
 man_life_int = 5
 user_life_int = 5
