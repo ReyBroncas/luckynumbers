@@ -1,6 +1,7 @@
 import sys
-
+import os
 def draw(status_line,global_line):
+    os.system('clear')
     score = 123
     #printing status_line
     for each in status_line:
@@ -45,7 +46,7 @@ def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,animation
             global_line.extend(''.join(user[line]+man[line]+'H'))
 
         else:
-            
+
             global_line.extend(''.join(text_area[line-9]+man[line]+'H'))
     global_line = denester(global_line,16,len(global_line)/16)
 
