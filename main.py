@@ -14,7 +14,11 @@ user_live = denester(user_live,9,len(user_live)/9)
 heart = denester(heart,2,len(heart)/2)
 text_area = qustion_area_maker(qustion_text_1)
 
+start_logo = denester(start_logo,20,len(start_logo)/20)
+landscape_1 = denester(landscape_1,20,len(landscape_1)/20)
+blank_space_startup = denester(blank_space_startup,1,len(blank_space_startup)/1)
 
+#! Animation
 user_x_anim = [user_x_anim_1,user_x_anim_2,user_x_anim_3,user_x_anim_4,user_x_anim_5,user_x_anim_6,user_x_anim_7,user_x_anim_1,user_x_anim_1,user_x_anim_1]
 man_x_anim = [man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_8,man_x_anim_9,man_x_anim_1]
 user_y_anim = [user_y_anim_1,user_y_anim_2,user_y_anim_3,user_y_anim_4,user_y_anim_5,user_y_anim_6,user_y_anim_7,user_y_anim_8,user_y_anim_9,user_y_anim_10]
@@ -38,9 +42,11 @@ while i < len(user_x_anim):
 #print(sequences.prime_numbers(diff_list[x]))
 #print(sequences.ulam_numbers(diff_list[x]))
 
-#! Animation
 
-
+draw(blank_space_startup,start_logo)
+time.sleep(2)
+draw(blank_space_startup,landscape_1)
+time.sleep(1)
 
 line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134)
 draw(line[0],line[1])
@@ -49,7 +55,7 @@ while x < 10:
     draw(line[0],anim_x_global_line[x])
     time.sleep(0.04)
     x += 1
-input()
+
 x = 0
 while x < 10:
     draw(line[0],anim_y_global_line[x])
