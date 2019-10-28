@@ -1,7 +1,7 @@
 user_x_anim_1 = """
       /  /    \ /‾\                                         H
       \  |     ˙/\‾)                                        H
-       \      / ~(‾]--- , KD                                H
+       \      / ~(‾]--- ,                                   H
         ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
         (,o‾o,)                                             H
        ‾‾|‾‾‾|‾‾                                            H
@@ -11,12 +11,12 @@ user_x_anim_1 = """
                                                             HHeight10
 """
 user_x_anim_2 ="""
-      /  /    \ /‾\                                         H
-      \  |     ˙/\‾)                                        H
-       \      / ~(‾]--- ,      KD                           H
-        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
-        (,o‾o,)                                             H
-       ‾‾|‾‾‾|‾‾                                            H
+      /  /    \ /‾\           "   '    '                    H
+      \  |     ˙/\‾)         " '  '     '                   H
+       \      / ~(‾]--- ,   'KD                             H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙   "      '                       H
+        (,o‾o,)                 '   '                       H
+       ‾‾|‾‾‾|‾‾                    "                       H
           ‾‾‾                                               H
                                                             H
                                                             H
@@ -87,7 +87,7 @@ man_x_anim_8 = R"""
              ___              H
           __|___|__           H
     KD     ('o_o')            H
-.___ __    _\~-~/_            H
+.___ __    _\O  /_            H
 ' ---[_)~ //\__/\ \           H
      (_\/. )0  0(  \          H
        \_/ \    /  /          H
@@ -154,6 +154,145 @@ man_x_anim_1 = R"""
           | |  | |            H
           |_|  |_|            H
           /_\  /_\            HHeight16
+"""
+man_y_anim_1 = R"""
+             ___              H
+          __|___|__           H
+           ('o_o')            H
+.___ __    _\~-~/_            H
+' ---[_)~ //\__/\ \           H
+     (_\/. )0  0(  \          H
+       \_/ \    /  /          H
+          / |__| \(           H
+         / /(\/)\ \\          H
+        /_/      \_\          H
+       (_||      ||_)         H
+         \| |__| |/           H
+          | |  | |            H
+          | |  | |            H
+          |_|  |_|            H
+          /_\  /_\            HHeight16
+"""
+user_y_anim_1 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)                                           GKH
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_2 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)                                      GK     H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_3 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)                               GK            H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_4 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)                     GK                      H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_5 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)           GK                                H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_6 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)     GK                                      H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+
+user_y_anim_7 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)<                                            H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_8 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/  O\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)<                                            H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_9 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/  O\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)                                             H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
+"""
+user_y_anim_10 = """
+      /  /    \ /‾\                                         H
+      \  |     ˙/\‾)                                        H
+       \      / ~(‾]--- ,                                   H
+        ‾/~-~\‾    ‾‾ ‾‾‾˙                                  H
+        (,o‾o,)                                             H
+       ‾‾|‾‾‾|‾‾                                            H
+          ‾‾‾                                               H
+                                                            H
+                                                            H
+                                                            HHeight10
 """
 user_live ="""
       /  /    \ /‾\                                         H
@@ -236,7 +375,7 @@ heart = R"""
  \/  H
 """
 question_text_1 = """
-Lorem ipsum dolor sit amet, consecteturH
+hello my lil motherfucker amet, consecteturH
 adipiscing elit. Aliquam nonH
 sagittis leo, sit amet rutrum orci. H
 Cras sempeH

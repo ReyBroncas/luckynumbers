@@ -15,21 +15,31 @@ heart = denester(heart,2,len(heart)/2)
 text_area = qustion_area_maker(qustion_text_1)
 
 
+user_x_anim = [user_x_anim_1,user_x_anim_2,user_x_anim_3,user_x_anim_4,user_x_anim_5,user_x_anim_6,user_x_anim_7,user_x_anim_1,user_x_anim_1,user_x_anim_1]
+man_x_anim = [man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_8,man_x_anim_9,man_x_anim_1]
+user_y_anim = [user_y_anim_1,user_y_anim_2,user_y_anim_3,user_y_anim_4,user_y_anim_5,user_y_anim_6,user_y_anim_7,user_y_anim_8,user_y_anim_9,user_y_anim_10]
+man_y_anim = [man_y_anim_1,man_y_anim_1,man_y_anim_1,man_y_anim_1,man_y_anim_1,man_y_anim_1,man_y_anim_1,man_y_anim_1,man_y_anim_1,man_y_anim_1]
+
+anim_x_global_line = []
+anim_y_global_line = []
+i=0
+while i < len(user_x_anim):
+    user_x_anim[i] = denester(user_x_anim[i],9,len(user_x_anim[i])/9)
+    man_x_anim[i] = denester(man_x_anim[i],16,len(man_x_anim[i])/16)
+
+    user_y_anim[i] = denester(user_y_anim[i],9,len(user_y_anim[i])/9)
+    man_y_anim[i] = denester(man_y_anim[i],16,len(man_y_anim[i])/16)
+
+    anim_x_global_line.append(draw_proccessing(text_area,user_x_anim[i],man_x_anim[i],0,0,0,0,True))
+    anim_y_global_line.append(draw_proccessing(text_area,user_y_anim[i],man_y_anim[i],0,0,0,0,True))
+    i+=1
+
 #print(sequences.lucky_numbers(diff_list[x]))
 #print(sequences.prime_numbers(diff_list[x]))
 #print(sequences.ulam_numbers(diff_list[x]))
 
 #! Animation
-user_x_anim = [user_x_anim_1,user_x_anim_2,user_x_anim_3,user_x_anim_4,user_x_anim_5,user_x_anim_6,user_x_anim_7,user_x_anim_1,user_x_anim_1,user_x_anim_1]
-man_x_anim = [man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_1,man_x_anim_8,man_x_anim_9,man_x_anim_10]
 
-anim_x_global_line = []
-i=0
-while i < len(user_x_anim):
-    user_x_anim[i] = denester(user_x_anim[i],9,len(user_x_anim[i])/9)
-    man_x_anim[i] = denester(man_x_anim[i],16,len(man_x_anim[i])/16)
-    anim_x_global_line.append(draw_proccessing(text_area,user_x_anim[i],man_x_anim[i],0,0,0,0,True))
-    i+=1
 
 
 line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134)
@@ -37,6 +47,12 @@ draw(line[0],line[1])
 x = 0
 while x < 10:
     draw(line[0],anim_x_global_line[x])
+    time.sleep(0.04)
+    x += 1
+input()
+x = 0
+while x < 10:
+    draw(line[0],anim_y_global_line[x])
     time.sleep(0.04)
     x += 1
 '''
