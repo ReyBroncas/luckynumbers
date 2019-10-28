@@ -43,6 +43,3 @@ while man_live > 0 and user_live > 0:
         continue
 
 print("While has finis")
-
-
-

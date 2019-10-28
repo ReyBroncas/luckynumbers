@@ -2,12 +2,7 @@ import copy
 import random
 
 def sequence_cut(input_list, difficulty):
-    '''
-    (list,list) -> list
-    function that removes all the elements that are not within the inputed range
-    >>> sequence_cut([1,2,5,6,19,20,21,34,45],[6,34])
-    [6, 19, 20, 21, 34]
-    '''
+
     for each in copy.copy(input_list):
         if each < difficulty[0]:
             input_list.remove(each)
@@ -36,7 +31,7 @@ def lucky_numbers(difficulty):
             break
         f += 1
     raw = sequence_cut(raw,difficulty)
-    return raw[random.randrange(len(raw))]
+    return [raw[random.randrange(len(raw))],raw]
 
 def prime_numbers(difficulty):
     figures = []
@@ -59,7 +54,7 @@ def prime_numbers(difficulty):
                     count += 1
                     continue
     prime_numbers = sequence_cut(prime_numbers,difficulty)
-    return prime_numbers[random.randrange(len(prime_numbers))]
+    return [prime_numbers[random.randrange(len(prime_numbers))],prime_numbers]
 
 def ulam_numbers(difficulty):
     arr = [1,2]
@@ -79,7 +74,7 @@ def ulam_numbers(difficulty):
             arr.append(i)
             arr2.add(i)
     arr = sequence_cut(arr,difficulty)
-    return arr[random.randrange(len(arr))]
+    return [arr[random.randrange(len(arr))],arr]
 
 def input_validator(x):
     try:
@@ -102,3 +97,7 @@ def choose_difficulty():
             return game_difficulty
     else:
         return 1
+
+def randomize_number_output(num1,num2,num3):
+    number_list = [(num1,1),(num2,2),(num3,3)]
+    return number_list[random.randint(0,len(number_list)-1)]
