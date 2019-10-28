@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="84b852de-78f2-456e-af30-0d3592a2b6af" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/essential.py" beforeDir="false" afterPath="$PROJECT_DIR$/essential.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res.py" beforeDir="false" afterPath="$PROJECT_DIR$/res.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sequences.py" beforeDir="false" afterPath="$PROJECT_DIR$/sequences.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="newprocessing_unit" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="res" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learn_numbers" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newprocessing_unit.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/res.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,19 +105,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="processing_unit" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sequences" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learn_numbers" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/local/bin/python3.7" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/processing_unit.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sequences.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,12 +126,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Doctests in sequences" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
+      <module name="learn_numbers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sequences.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.sequences" />
+        <item itemvalue="Python.res" />
+        <item itemvalue="Python tests.Doctests in sequences" />
         <item itemvalue="Python.essential" />
-        <item itemvalue="Python.newprocessing_unit" />
-        <item itemvalue="Python.processing_unit" />
       </list>
     </recent_temporary>
   </component>

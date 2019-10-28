@@ -21,6 +21,7 @@ def qustion_area_maker(question_text):
     output_list.append('+'+'-'*58+'+')
     return output_list
 
+
 def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,animation=False):
     global_line = []
     if not animation:

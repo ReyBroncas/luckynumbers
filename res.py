@@ -236,9 +236,24 @@ heart = R"""
  \/  H
 """
 question_text_1 = """
-Lorem ipsum dolor sit amet, consecteturH
-adipiscing elit. Aliquam nonH
-sagittis leo, sit amet rutrum orci. H
-Cras sempeH
-            hoggych    H
+-SUP B****  H
+-Wanna fuc**** taste my bullets?H
+-Imma see whatchu have sonH
+-Try to guess the LUCKY number    H
+        H
 """
+question_text_2 = """
+-SUP B****H
+-Wanna fuc**** taste my bullets?H
+-Imma see whatchu have sonH
+-Try to guess the PRIME number    H
+         H
+"""
+question_text_3 = """
+-SUP B****H
+-Wanna fuc**** taste my bullets?H
+-Imma see whatchu have sonH
+-Try to guess the ULAM number    H
+        H
+"""
+
