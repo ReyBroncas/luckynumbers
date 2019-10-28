@@ -51,17 +51,9 @@ time.sleep(1)
 
 line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134,[12,45,117])
 draw(line[0],line[1],line[2])
-x = 0
-while x < 10:
-    draw(line[0],anim_x_global_line[x],line[2])
-    time.sleep(0.05)
-    x += 1
 
-x = 0
-while x < 10:
-    draw(line[0],anim_y_global_line[x],line[2])
-    time.sleep(0.05)
-    x += 1
+animation_draw(anim_x_global_line,line[0],line[2])
+animation_draw(anim_y_global_line,line[0],line[2])
 '''
 man_life_int = 5
 user_life_int = 5

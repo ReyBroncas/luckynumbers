@@ -1,5 +1,6 @@
 import sys
 import os
+import time
 def draw(status_line,global_line,base_line):
     os.system('clear')
     score = 123
@@ -23,7 +24,12 @@ def qustion_area_maker(question_text):
     output_list.insert(0,'+'+'-'*58+'+')
     output_list.append('+'+'-'*58+'+')
     return output_list
-
+def animation_draw(anim_lines,status_line,base_line):
+    x = 0
+    while x < 10:
+        draw(status_line,anim_lines[x],base_line)
+        time.sleep(0.05)
+        x += 1
 def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,numbers,animation=False):
     global_line = []
     if not animation:
@@ -48,9 +54,9 @@ def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,numbers,a
         x = 0
         for each in numbers:
             bullet = []
-            bullet.append('\033[33m|'+' '*((18//2)-len(str(each)))+str(each)+' '*((18//2)-len(str(each)))+'| \\')
-            bullet.insert(0,'\033[33m '+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'_  ')
-            bullet.append('\033[33m|'+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'|_/')
+            bullet.append('\033[31m|'+' '*((18//2)-len(str(each)))+str(each)+' '*((18//2)-len(str(each)))+'| \\')
+            bullet.insert(0,'\033[31m '+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'_  ')
+            bullet.append('\033[31m|'+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'|_/')
             bullet_lines.append(bullet)
         while x <3 :
             base_line.append(''.join(bullet_lines[0][x]+' '*8+bullet_lines[1][x]+' '*8+bullet_lines[2][x]))
