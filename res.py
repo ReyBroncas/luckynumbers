@@ -443,23 +443,23 @@ heart = R"""
  \/  H
 """
 question_text_1 = """
--SUP B****  H
+-SUP B***  H
 -Wanna fuc**** taste my bullets?H
 -Imma see whatchu have sonH
--Try to guess the LUCKY number    H
+-Try to guess the LUCKY number on my bulletsH
         H
 """
 question_text_2 = """
--SUP B****H
--Wanna fuc**** taste my bullets?H
+-SUP B***H
+-Wanna fuc** taste my bullets?H
 -Imma see whatchu have sonH
--Try to guess the PRIME number    H
+-Try to guess the PRIME number on my bulletsH
          H
 """
 question_text_3 = """
--SUP B****H
+-SUP B***H
 -Wanna fuc**** taste my bullets?H
 -Imma see whatchu have sonH
--Try to guess the ULAM number    H
+-Try to guess the ULAM number on my bulletsH
         H
 """

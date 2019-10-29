@@ -47,13 +47,19 @@ while i < len(user_x_anim):
 draw(blank_space_startup,start_logo,blank_space_startup)
 time.sleep(2)
 draw(blank_space_startup,landscape_1,blank_space_startup)
-time.sleep(1)
+while 1:
+    user_answer = input('\033[1;37;40m>>> ')
+    if input_validator(user_answer)==True:
+        if int(user_answer) == 2:
+            exit()
+        break
+    else:
+        continue
 
-line = draw_proccessing(text_area,user_live,cowboy_alive,heart,5,5,134,[12,45,117])
-draw(line[0],line[1],line[2])
 
-animation_draw(anim_x_global_line,line[0],line[2])
-animation_draw(anim_y_global_line,line[0],line[2])
+
+
+
 
 
 
@@ -90,7 +96,7 @@ while man_life_int > 0 and user_life_int > 0:
     draw(line[0],line[1],line[2])
 
     #print(output_num_list[0],output_num_list[1],output_num_list[2])
-    user_answer = input()
+    user_answer = input('\033[1;37;40m>>> ')
     if input_validator(user_answer)==True:
         user_answer = int(user_answer)
         if ((xyx[1]==1) and (user_answer==lucky_var)) or\
