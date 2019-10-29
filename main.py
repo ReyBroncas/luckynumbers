@@ -113,4 +113,4 @@ while man_life_int > 0 and user_life_int > 0:
     else:
         continue
 
-print("While has finis")
+print("GAME OVER!")

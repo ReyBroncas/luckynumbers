@@ -89,7 +89,7 @@ def input_validator(x):
         return False
 
 def choose_difficulty():
-    print("choose diffilty from 1 to 3")           #    <-  Ілюстрації до складності на весь екран
+    print("Choose difficulty from 1 to 3 [1 -> EASY ; 2 -> NORMAL ; 3 -> HARD")           #    <-  Ілюстрації до складності на весь екран
     game_difficulty = input()
     if input_validator(game_difficulty)==True:
         game_difficulty = int(game_difficulty)
