@@ -10,7 +10,7 @@ user_live = 5
 def input_validator(x):
     try:
         x = int(x)
-        if x>0:
+        if x >= 0:
             return True
         else:
             print("The number can't be negative")
@@ -43,6 +43,3 @@ while man_live > 0 and user_live > 0:
         continue
 
 print("While has finis")
-
-
-
