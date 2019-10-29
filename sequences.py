@@ -79,7 +79,7 @@ def ulam_numbers(difficulty):
 def input_validator(x):
     try:
         x = int(x)
-        if x>0:
+        if x>=0:
             return True
         else:
             print("The number can't be negative")

@@ -101,6 +101,7 @@ while True:
                ((xyx[1]==2) and (user_answer==prime_var)) or\
                ((xyx[1]==3) and (user_answer==ulam_var)):
                 man_life_int -= 1
+                score += 1
                 line = draw_proccessing(question_text, user_live, cowboy_alive, heart, user_life_int, man_life_int, score,output_num_list)
                 animation_draw(anim_x_global_line,line[0],line[2])
                 # draw(line[0], line[1])                                                                                       <---- ANIMATION
@@ -110,8 +111,6 @@ while True:
                 animation_draw(anim_y_global_line,line[0],line[2])
         else:
             continue
-    if man_life_int==0:
-        score += 1
     print("GAME OVER!")
     print("Restart the game? [1 -> YES ; 2 -> NO]")
     restart_input = int(input())
