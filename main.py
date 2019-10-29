@@ -66,51 +66,61 @@ while 1:
 
 
 
+score = 0
+while True:
+    man_life_int = 5
+    user_life_int = 5
 
+    user_difficulty = choose_difficulty()
 
-man_life_int = 5
-user_life_int = 5
+    while man_life_int > 0 and user_life_int > 0:
+        xyx = randomize_number_output(question_text_1, question_text_2, question_text_3)
+        question_text = denester(xyx[0], 5, len(xyx[0]) / 5)
+        question_text = qustion_area_maker(question_text)
+        for i in range(0, 100):
+            lucky_var, lucky_numbers1 = lucky_numbers(diff_list[user_difficulty - 1])
+            prime_var, prime_numbers1 = prime_numbers(diff_list[user_difficulty - 1])
+            ulam_var, ulam_numbers1 = ulam_numbers(diff_list[user_difficulty - 1])
+            if (ulam_var == prime_var) or (prime_var == lucky_var) or (ulam_var == lucky_var) or \
+                    (lucky_var in prime_numbers1) or (lucky_var in ulam_numbers1) \
+                    or (prime_var in lucky_numbers1) or (prime_var in ulam_numbers1) \
+                    or (ulam_var in lucky_numbers1) or (ulam_var in prime_numbers1):
+                continue
+            else:
+                break
+        output_num_list = [lucky_var,prime_var,ulam_var]
+        random.shuffle(output_num_list)
+        line = draw_proccessing(question_text,user_live,cowboy_alive,heart,user_life_int,man_life_int,score,output_num_list)
+        draw(line[0],line[1],line[2])
 
-user_difficulty = choose_difficulty()
-
-
-
-while man_life_int > 0 and user_life_int > 0:
-    xyx = randomize_number_output(question_text_1, question_text_2, question_text_3)
-    question_text = denester(xyx[0], 5, len(xyx[0]) / 5)
-    question_text = qustion_area_maker(question_text)
-    for i in range(0, 100):
-        lucky_var, lucky_numbers1 = lucky_numbers(diff_list[user_difficulty - 1])
-        prime_var, prime_numbers1 = prime_numbers(diff_list[user_difficulty - 1])
-        ulam_var, ulam_numbers1 = ulam_numbers(diff_list[user_difficulty - 1])
-        if (ulam_var == prime_var) or (prime_var == lucky_var) or (ulam_var == lucky_var) or \
-                (lucky_var in prime_numbers1) or (lucky_var in ulam_numbers1) \
-                or (prime_var in lucky_numbers1) or (prime_var in ulam_numbers1) \
-                or (ulam_var in lucky_numbers1) or (ulam_var in prime_numbers1):
+        #print(output_num_list[0],output_num_list[1],output_num_list[2])
+        user_answer = input('\033[1;37;40m>>> ')
+        if input_validator(user_answer)==True:
+            user_answer = int(user_answer)
+            if ((xyx[1]==1) and (user_answer==lucky_var)) or\
+               ((xyx[1]==2) and (user_answer==prime_var)) or\
+               ((xyx[1]==3) and (user_answer==ulam_var)):
+                man_life_int -= 1
+                line = draw_proccessing(question_text, user_live, cowboy_alive, heart, user_life_int, man_life_int, score,output_num_list)
+                animation_draw(anim_x_global_line,line[0],line[2])
+                # draw(line[0], line[1])                                                                                       <---- ANIMATION
+            else:
+                user_life_int -= 1
+                line = draw_proccessing(question_text, user_live, cowboy_alive, heart, user_life_int, man_life_int, score,output_num_list)
+                animation_draw(anim_y_global_line,line[0],line[2])
+        else:
+            continue
+    if man_life_int==0:
+        score += 1
+    print("GAME OVER!")
+    print("Restart the game? [1 -> YES ; 2 -> NO]")
+    restart_input = int(input())
+    if input_validator(restart_input)==True:
+        if restart_input==1:
             continue
         else:
             break
-    output_num_list = [lucky_var,prime_var,ulam_var]
-    random.shuffle(output_num_list)
-    line = draw_proccessing(question_text,user_live,cowboy_alive,heart,user_life_int,man_life_int,1,output_num_list)
-    draw(line[0],line[1],line[2])
-
-    #print(output_num_list[0],output_num_list[1],output_num_list[2])
-    user_answer = input('\033[1;37;40m>>> ')
-    if input_validator(user_answer)==True:
-        user_answer = int(user_answer)
-        if ((xyx[1]==1) and (user_answer==lucky_var)) or\
-           ((xyx[1]==2) and (user_answer==prime_var)) or\
-           ((xyx[1]==3) and (user_answer==ulam_var)):
-            man_life_int -= 1
-            line = draw_proccessing(question_text, user_live, cowboy_alive, heart, user_life_int, man_life_int, 1,output_num_list)
-            animation_draw(anim_x_global_line,line[0],line[2])
-            # draw(line[0], line[1])                                                                                       <---- ANIMATION
-        else:
-            user_life_int -= 1
-            line = draw_proccessing(question_text, user_live, cowboy_alive, heart, user_life_int, man_life_int, 1,output_num_list)
-            animation_draw(anim_y_global_line,line[0],line[2])
     else:
-        continue
+        print("Wrong input. Please write either 1 or 2")
 
-print("GAME OVER!")
+exit()
