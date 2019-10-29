@@ -5,9 +5,7 @@ import time
 
 x=2
 diff_list = ((0,20),(21,100),(101,200))
-revolver = denester(revolver,9,len(revolver)/9)
 qustion_text_1 = denester(question_text_1,5,len(question_text_1)/5)
-revolver_shot = denester(revolver_shot,9,len(revolver_shot)/9)
 cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
 cowboy_dead = denester(cowboy_dead,16,len(cowboy_dead)/16)
 user_live = denester(user_live,9,len(user_live)/9)
