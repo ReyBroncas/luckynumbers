@@ -3,12 +3,13 @@ from essential import *
 from res import *
 import time
 
-x=2
+
 diff_list = ((0,20),(21,100),(101,200))
 qustion_text_1 = denester(question_text_1,5,len(question_text_1)/5)
 cowboy_alive = denester(cowboy_alive,16,len(cowboy_alive)/16)
 cowboy_dead = denester(cowboy_dead,16,len(cowboy_dead)/16)
 user_live = denester(user_live,9,len(user_live)/9)
+user_dead = denester(user_dead,9,len(user_dead)/9)
 heart = denester(heart,2,len(heart)/2)
 text_area = qustion_area_maker(qustion_text_1)
 
@@ -37,13 +38,8 @@ while i < len(user_x_anim):
     anim_y_global_line.append(draw_proccessing(text_area,user_y_anim[i],man_y_anim[i],0,0,0,0,[],True))
     i+=1
 
-#print(sequences.lucky_numbers(diff_list[x]))
-#print(sequences.prime_numbers(diff_list[x]))
-#print(sequences.ulam_numbers(diff_list[x]))
-
-
 draw(blank_space_startup,start_logo,blank_space_startup)
-time.sleep(2)
+time.sleep(1)
 draw(blank_space_startup,landscape_1,blank_space_startup)
 while 1:
     user_answer = input('\033[1;37;40m>>> ')
@@ -116,6 +112,9 @@ while True:
         draw(line[0], line[1], line[2])
         print("Hm.. You're good. But i'll see you again soon. Very soon..")
     if user_life_int==0:
+        line = draw_proccessing(question_text, user_dead, cowboy_alive, heart, user_life_int, man_life_int, score,
+                                output_num_list)
+        draw(line[0], line[1], line[2])
         print("Try again later boy.  Слава Ісусу Христу")
     print("Restart the game? [1 -> YES ; 2 -> NO]")
     restart_input = int(input())
