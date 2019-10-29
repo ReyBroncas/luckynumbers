@@ -54,9 +54,9 @@ def draw_proccessing(text_area,user,man,heart,user_live,man_live,score,numbers,a
         x = 0
         for each in numbers:
             bullet = []
-            bullet.append('\033[31m|'+' '*((18//2)-len(str(each)))+str(each)+' '*((18//2)-len(str(each)))+'| \\')
-            bullet.insert(0,'\033[31m '+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'_  ')
-            bullet.append('\033[31m|'+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'|_/')
+            bullet.append('\033[33m|'+' '*((18//2)-len(str(each)))+str(each)+' '*((18//2)-len(str(each)))+'| \\\033[37m')
+            bullet.insert(0,'\033[33m '+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'_  \033[37m')
+            bullet.append('\033[33m|'+'_'*((18//2)-len(str(each)))+'_'*len(str(each))+'_'*((18//2)-len(str(each)))+'|_/\033[37m')
             bullet_lines.append(bullet)
         while x <3 :
             base_line.append(''.join(bullet_lines[0][x]+' '*8+bullet_lines[1][x]+' '*8+bullet_lines[2][x]))
