@@ -113,6 +113,9 @@ while True:
             continue
     print("GAME OVER!")
     if man_life_int==0:
+        line = draw_proccessing(question_text, user_live, cowboy_dead, heart, user_life_int, man_life_int, score,
+                                output_num_list)
+        draw(line[0], line[1], line[2])
         print("Hm.. You're good. But i'll see you again soon. Very soon..")
     if user_life_int==0:
         print("Try again later boy.  Слава Ісусу Христу")
