@@ -110,13 +110,22 @@ while True:
         else:
             continue
     print("GAME OVER!")
+    if man_life_int==0:
+        line = draw_proccessing(question_text, user_live, cowboy_dead, heart, user_life_int, man_life_int, score,
+                                output_num_list)
+        draw(line[0], line[1], line[2])
+        print("Hm.. You're good. But i'll see you again soon. Very soon..")
+    if user_life_int==0:
+        print("Try again later boy.  Слава Ісусу Христу")
     print("Restart the game? [1 -> YES ; 2 -> NO]")
     restart_input = int(input())
     if input_validator(restart_input)==True:
         if restart_input==1:
             continue
-        else:
+        elif restart_input==2:
             break
+        else:
+            exit()
     else:
         print("Wrong input. Please write either 1 or 2")
 
