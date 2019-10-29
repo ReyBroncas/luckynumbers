@@ -50,16 +50,6 @@ while 1:
     else:
         continue
 
-
-
-
-
-
-
-
-
-
-
 score = 0
 while True:
     man_life_int = 5
